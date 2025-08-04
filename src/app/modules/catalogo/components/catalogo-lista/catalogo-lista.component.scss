@@ -1,0 +1,42 @@
+.catalogo {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.tarjeta {
+  width: 180px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  background: #fffaf0;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.1);
+
+  img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+  }
+
+  .precio {
+    font-weight: bold;
+    color: #4caf50;
+    margin: 10px 0;
+  }
+
+  button {
+    background-color: #ff4b5c;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #ff1e2d;
+  }
+}

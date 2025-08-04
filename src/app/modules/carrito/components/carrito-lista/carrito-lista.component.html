@@ -1,0 +1,19 @@
+<div *ngIf="productos.length === 0" class="vacio">
+  <p>Tu carrito está vacío.</p>
+</div>
+
+<div *ngFor="let p of productos" class="producto-carrito">
+  <img [src]="p.imagenUrl" alt="{{ p.nombre }}" />
+  <div class="detalle">
+    <h3>{{ p.nombre }}</h3>
+    <p>Cantidad: {{ p.cantidad }}</p>
+    <p>Precio unitario: {{ p.precio | currency:'CLP' }}</p>
+    <p>Subtotal: {{ p.precio * p.cantidad | currency:'CLP' }}</p>
+    <button (click)="eliminar(p.id)">Eliminar</button>
+  </div>
+</div>
+
+<div *ngIf="productos.length > 0" class="resumen">
+  <h3>Total: {{ total() | currency:'CLP' }}</h3>
+  <button>Finalizar Compra</button>
+</div>
